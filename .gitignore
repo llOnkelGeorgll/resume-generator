@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# User Data & Outputs
+data/experiences/*
+!data/experiences/.gitkeep
+
+data/reference_material/*
+!data/reference_material/.gitkeep
+
+data/outputs/*
+!data/outputs/.gitkeep
+
+data/staging/*
+!data/staging/.gitkeep
+
+# Temporary & Debug files
+*.pdf
+*.docx
+*.log
+.DS_Store
+temp_debug.html

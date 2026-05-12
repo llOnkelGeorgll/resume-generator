@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style type="text/css">
+    @page {
+        size: letter;
+        margin: 0;
+    }
+
+    :root {
+        --base-font-size: 10pt;
+        --margin-scale: 1;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        color: #1e293b;
+        font-size: var(--base-font-size);
+        line-height: 1.4;
+        margin: 0;
+        padding: 0.5in;
+        box-sizing: border-box;
+    }
+
+    /* Header */
+    .header-container {
+        text-align: center;
+        margin-bottom: calc(10px * var(--margin-scale));
+    }
+    .name {
+        font-size: 20pt;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 4px;
+    }
+    .contact {
+        color: #475569;
+    }
+
+    /* Section Headers */
+    h2 {
+        text-transform: uppercase;
+        font-size: 11pt;
+        border-bottom: 2px solid #2563eb; 
+        margin-top: calc(15px * var(--margin-scale));
+        margin-bottom: calc(8px * var(--margin-scale));
+        letter-spacing: 0.05em;
+        color: #1e293b;
+        padding-bottom: 2px;
+    }
+
+    /* Skills Grid */
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+        background-color: #f8fafc; 
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: calc(10px * var(--margin-scale));
+    }
+    .skills-container > div:nth-child(even) {
+        border-left: 1px solid #e2e8f0;
+        padding-left: 10px;
+    }
+
+    /* Experience Block */
+    .experience-item {
+        margin-bottom: calc(12px * var(--margin-scale));
+    }
+
+    .experience-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-weight: 600;
+        margin-bottom: 2px;
+    }
+    .experience-left {
+        display: flex;
+        gap: 6px;
+    }
+    .company { font-weight: 700; }
+    .title { font-style: italic; color: #475569; font-weight: 400; }
+    .dates { text-align: right; color: #475569; font-weight: 400; }
+
+    /* Lists */
+    ul {
+        padding-left: 20px;
+        margin-top: 4px;
+        margin-bottom: 0;
+    }
+    li {
+        margin-bottom: 2px;
+    }
+    /* Custom bullet accent */
+    li::marker {
+        color: #2563eb;
+    }
+
+    /* Education Footer */
+    .education-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        font-size: var(--base-font-size);
+        margin-top: calc(10px * var(--margin-scale));
+    }
+    .edu-item {
+        display: flex;
+        flex-direction: column;
+    }
+    .edu-degree { font-weight: 600; }
+    .edu-school { color: #475569; }
+  </style>
+</head>
+<body>
+
+<div class="header-container">
+  <div class="name">Georg Weber</div>
+  <div class="contact">(650) 223-3053 • Bay Area, CA • georgweber88@gmail.com • <a href="https://www.linkedin.com/in/georg-weber-a8914397/" style="color: #2563eb; text-decoration: none;">LinkedIn</a></div>
+</div>
+
+<div style="margin-bottom: calc(12px * var(--margin-scale))">
+  {{summary}}
+</div>
+
+<h2>Core Competencies</h2>
+<div class="skills-container">
+  <div>{{competency_1}}</div>
+  <div>{{competency_2}}</div>
+  <div>{{competency_3}}</div>
+  <div>{{competency_4}}</div>
+</div>
+
+<h2>Professional Experience</h2>
+
+<div class="experience-item">
+    <div class="experience-header">
+        <div class="experience-left"><span class="company" style="font-weight: 700; color: #1e293b;">ASSURANT INC. | Redwood City, CA (Remote)</span></div>
+        <div class="dates">2025 – Present</div>
+    </div>
+    <div class="experience-header" style="margin-top: 2px;">
+        <div class="experience-left"><span class="title">Sr. Product Manager</span></div>
+    </div>
+    <ul>
+        <li>{{sr_product_manager}}</li>
+    </ul>
+</div>
+
+<div class="experience-group" style="margin-bottom: calc(12px * var(--margin-scale));">
+    <div class="experience-left" style="margin-bottom: 4px;"><span class="company" style="font-weight: 700; color: #1e293b;">OPTOFIDELITY INC. | Cupertino, CA</span></div>
+    
+    <div class="experience-subitem" style="margin-bottom: 6px;">
+        <div class="experience-header">
+            <div class="experience-left"><span class="title">Director, Technical Account Management</span></div>
+            <div class="dates">2023 – 2025</div>
+        </div>
+        <ul>
+            <li>{{director_tam}}</li>
+        </ul>
+    </div>
+
+    <div class="experience-subitem" style="margin-bottom: 6px;">
+        <div class="experience-header">
+            <div class="experience-left"><span class="title">Director, Customer Success</span></div>
+            <div class="dates">2021 – 2023</div>
+        </div>
+        <ul>
+            <li>{{director_cs}}</li>
+        </ul>
+    </div>
+
+    <div class="experience-subitem" style="margin-bottom: 6px;">
+        <div class="experience-header">
+            <div class="experience-left"><span class="title">Customer Success Manager</span></div>
+            <div class="dates">2019 – 2021</div>
+        </div>
+        <ul>
+            <li>{{cs_manager}}</li>
+        </ul>
+    </div>
+
+    <div class="experience-subitem">
+        <div class="experience-header">
+            <div class="experience-left"><span class="title">Customer Success Engineer</span></div>
+            <div class="dates">2017 – 2019</div>
+        </div>
+        <ul>
+            <li>{{cs_engineer}}</li>
+        </ul>
+    </div>
+</div>
+
+<div class="experience-item">
+    <div class="experience-header">
+        <div class="experience-left"><span class="company" style="font-weight: 700; color: #1e293b;">BIRTHDAY BOX INC.</span></div>
+    </div>
+    <div class="experience-header" style="margin-top: 2px;">
+        <div class="experience-left"><span class="title">Co-Founder &amp; Technical Lead</span></div>
+        <div class="dates">2014 – 2016</div>
+    </div>
+    <ul>
+        <li>{{co_founder}}</li>
+    </ul>
+</div>
+
+<div class="experience-item">
+    <div class="experience-header">
+        <div class="experience-left"><span class="company" style="font-weight: 700; color: #1e293b;">ROBERT BOSCH LLC</span></div>
+    </div>
+    <div class="experience-header" style="margin-top: 2px;">
+        <div class="experience-left"><span class="title">Software Engineer</span></div>
+        <div class="dates">2014 – 2017</div>
+    </div>
+    <ul>
+        <li>{{software_engineer}}</li>
+    </ul>
+</div>
+
+<h2>Education</h2>
+<div class="education-container">
+    <div class="edu-item">
+        <span class="edu-degree">B.S. Electronics and Information Technology</span>
+        <span class="edu-school">Hochschule Heilbronn, Germany (2008 – 2013)</span>
+    </div>
+    <div class="edu-item">
+        <span class="edu-degree">IT Engineer Apprenticeship</span>
+        <span class="edu-school">DaimlerChrysler AG, Germany (2004 – 2007)</span>
+    </div>
+</div>
+
+</body>
+</html>

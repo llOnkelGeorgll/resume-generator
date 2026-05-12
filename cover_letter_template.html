@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cover Letter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style type="text/css">
+    @page { size: letter; margin: 0; }
+    :root { --base-font-size: 10pt; --margin-scale: 1; }
+    body { font-family: 'Inter', sans-serif; color: #1e293b; font-size: var(--base-font-size); line-height: 1.6; margin: 0; padding: 0.5in; box-sizing: border-box; }
+    .header-container { text-align: center; margin-bottom: calc(30px * var(--margin-scale)); }
+    .name { font-size: 20pt; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .contact { color: #475569; }
+    .letter-body { white-space: pre-wrap; margin-top: calc(20px * var(--margin-scale)); }
+    .meta-info { margin-bottom: calc(20px * var(--margin-scale)); color: #1e293b; }
+  </style>
+</head>
+<body>
+<div class="header-container">
+  <div class="name">Georg Weber</div>
+  <div class="contact">(650) 223-3053 • Bay Area, CA • georgweber88@gmail.com • <a href="https://www.linkedin.com/in/georg-weber-a8914397/" style="color: #2563eb; text-decoration: none;">LinkedIn</a></div>
+</div>
+
+<div class="meta-info">
+  <strong>Date:</strong> {{date}}<br>
+  <strong>Application:</strong> {{job_title}} at {{company_name}}
+</div>
+
+<div class="letter-body">{{cover_letter_body}}</div>
+</body>
+</html>

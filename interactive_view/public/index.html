@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity Context Viewer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo">
+            <h2>ATS Analyzer</h2>
+        </div>
+        <div class="job-list-container">
+            <h3>Active Packets</h3>
+            <ul id="job-list">
+                <!-- Populated by JS -->
+            </ul>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <header class="requirements-header" id="requirements-header">
+            <h3>ATS Extracted Requirements</h3>
+            <p>Hover over tracked requirements to highlight mapping. Click a mapped item on the resume to open the Assistant.</p>
+            <div id="requirements-pills" class="pills-container"></div>
+        </header>
+
+        <div class="split-layout">
+            <section class="resume-viewer" id="resume-viewer-pane">
+                <div class="resume-container">
+                    <div class="header-container">
+                        <div class="name">Georg Weber</div>
+                        <div class="contact">(650) 223-3053 • Bay Area, CA • georgweber88@gmail.com • <span style="color:#2563eb;">LinkedIn</span></div>
+                    </div>
+                    
+                    <div class="resume-summary" id="resume-summary"></div>
+                    
+                    <h2>Core Competencies</h2>
+                    <div class="skills-container" id="resume-competencies"></div>
+
+                    <h2>Professional Experience</h2>
+                    <div id="resume-experience"></div>
+                    
+                    <h2>Education</h2>
+                    <div class="education-container">
+                        <div class="edu-item">
+                            <span class="edu-degree">B.S. Electronics and Information Technology</span>
+                            <span class="edu-school">Hochschule Heilbronn, Germany (2008 – 2013)</span>
+                        </div>
+                        <div class="edu-item">
+                            <span class="edu-degree">IT Engineer Apprenticeship</span>
+                            <span class="edu-school">DaimlerChrysler AG, Germany (2004 – 2007)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interview Assistant Pane (Right Side) -->
+            <aside class="assistant-panel" id="assistant-panel">
+                <div class="assistant-header">
+                    <h4>Interview Assistant</h4>
+                    <p>Click a bullet point to analyze source & stories.</p>
+                </div>
+                
+                <div class="assistant-tabs hidden" id="assistant-tabs">
+                    <button class="tab-btn active" data-target="source-tab">ATS Source Proof</button>
+                    <button class="tab-btn" data-target="stories-tab">Behavioral Stories</button>
+                </div>
+                
+                <div class="assistant-content">
+                    <div id="source-tab" class="tab-pane active">
+                        <div class="empty-state">Click any bullet point on the resume to view its verified source trace.</div>
+                    </div>
+                    <div id="stories-tab" class="tab-pane"></div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
