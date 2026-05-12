@@ -7,13 +7,13 @@ This project provides an automated, AI-driven workflow to tailor your resume and
 - **Node.js**: Make sure you have Node.js installed.
 - **Antigravity**: This project heavily utilizes Antigravity for running the AI agents and workflows. You must be using the Antigravity assistant.
 
-## Installation
+## Installation & Auto-Setup
+
+This repository is optimized for AI assistants (like Antigravity). You don't need to manually install dependencies or start the server if you are using the AI!
 
 1. Clone or download this repository.
-2. Install the necessary dependencies (like Puppeteer for PDF generation):
-   ```bash
-   npm install
-   ```
+2. Open the project folder in your AI coding assistant.
+3. Simply tell the AI: **"Set up the project"** or **"Start the server"**. The AI will automatically read the `.gemini.md` instructions, install any missing dependencies (`npm install`), troubleshoot errors, and boot up the interactive viewer for you.
 
 ## Directory Structure & User Data
 
