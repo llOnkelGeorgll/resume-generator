@@ -23,7 +23,7 @@ To keep your personal data secure and separate from the application logic, all u
 Please populate the following directories:
 
 - `data/reference_material/old_resume`: A plain text markdown file of your current base resume. (The `/initialize` workflow will help you set this up).
-- `data/experiences/`: Create markdown files (e.g., `story_1_project.md`) detailing specific situations, projects, or accomplishments. The AI will pull from these to generate tailored bullet points.
+- `data/experiences/`: Create markdown files (e.g., `story_1_project.md`) detailing specific situations, projects, or accomplishments. The AI will pull from these to generate tailored bullet points. **(Tip: Type `/add_story` in the chat to have the AI help you write and format these stories!)**
 
 *Note: The generated tailored resumes and cover letters will automatically be saved to `data/outputs/`.*
 
