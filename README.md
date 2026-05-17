@@ -14,14 +14,15 @@ This repository is optimized for AI assistants (like Antigravity). You don't nee
 1. Clone or download this repository.
 2. Open the project folder in your AI coding assistant.
 3. Simply tell the AI: **"Set up the project"** or **"Start the server"**. The AI will automatically read the `.gemini.md` instructions, install any missing dependencies (`npm install`), troubleshoot errors, and boot up the interactive viewer for you.
+4. **CRITICAL FIRST STEP**: Once the AI is ready, type `/initialize` in the chat. The AI will ask for your personal contact info and your current resume. It will then act as a developer to completely rewrite the codebase's templates and logic to perfectly mold to your unique career history!
 
 ## Directory Structure & User Data
 
 To keep your personal data secure and separate from the application logic, all user-specific information should be placed in the `data/` directory. **This folder is ignored by Git, so your private details will not be uploaded.**
 
-Please populate the following directories before using the workflows:
+Please populate the following directories:
 
-- `data/reference_material/old_resume`: A plain text markdown file of your current base resume.
+- `data/reference_material/old_resume`: A plain text markdown file of your current base resume. (The `/initialize` workflow will help you set this up).
 - `data/experiences/`: Create markdown files (e.g., `story_1_project.md`) detailing specific situations, projects, or accomplishments. The AI will pull from these to generate tailored bullet points.
 
 *Note: The generated tailored resumes and cover letters will automatically be saved to `data/outputs/`.*
