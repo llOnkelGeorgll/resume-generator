@@ -16,15 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Structural definitions mapping JSON keys to UI labels (mirroring PDF structure)
     const experienceMap = [
-        { key: 'sr_product_manager', title: 'Sr. Product Manager', company: 'ASSURANT INC. | Redwood City, CA', dates: '2025 - Present' },
-        { group: 'OPTOFIDELITY INC. | Cupertino, CA', items: [
-            { key: 'director_tam', title: 'Director, Technical Account Management', dates: '2023 - 2025' },
-            { key: 'director_cs', title: 'Director, Customer Success', dates: '2021 - 2023' },
-            { key: 'cs_manager', title: 'Customer Success Manager', dates: '2019 - 2021' },
-            { key: 'cs_engineer', title: 'Customer Success Engineer', dates: '2017 - 2019' }
-        ]},
-        { key: 'co_founder', title: 'Co-Founder & Technical Lead', company: 'BIRTHDAY BOX INC.', dates: '2014 - 2016' },
-        { key: 'software_engineer', title: 'Software Engineer', company: 'ROBERT BOSCH LLC', dates: '2014 - 2017' },
+        { key: 'job_1', title: '[JOB_TITLE_1]', company: '[COMPANY_NAME_1]', dates: '[START_YEAR] - [END_YEAR]' },
+        { key: 'job_2', title: '[JOB_TITLE_2]', company: '[COMPANY_NAME_2]', dates: '[START_YEAR] - [END_YEAR]' }
     ];
 
     let currentJobReqs = [];
